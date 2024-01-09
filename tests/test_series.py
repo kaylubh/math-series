@@ -1,5 +1,7 @@
 import pytest
-from math_series.series import fibonacci
+from math_series.series import fibonacci, lucas
+
+# fibonacci tests
 
 def test_fibonacci_0():
   actual = fibonacci(0)
@@ -21,11 +23,6 @@ def test_fibonacci_3():
   expected = 2
   assert actual == expected
 
-def test_fibonacci_3():
-  actual = fibonacci(3)
-  expected = 2
-  assert actual == expected
-
 def test_fibonacci_4():
   actual = fibonacci(4)
   expected = 3
@@ -36,16 +33,6 @@ def test_fibonacci_5():
   expected = 5
   assert actual == expected
 
-def test_fibonacci_6():
-  actual = fibonacci(6)
-  expected = 8
-  assert actual == expected
-
-def test_fibonacci_7():
-  actual = fibonacci(7)
-  expected = 13
-  assert actual == expected
-
 def test_fibonacci_not_in_sequence():
   actual = fibonacci(-1)
   expected = None
@@ -53,5 +40,47 @@ def test_fibonacci_not_in_sequence():
 
 def test_fibonacci_not_an_integer():
   actual = fibonacci('1')
+  expected = None
+  assert actual == expected
+
+# lucas tests
+
+def test_lucas_0():
+  actual = lucas(0)
+  expected = 2
+  assert actual == expected
+
+def test_lucas_1():
+  actual = lucas(1)
+  expected = 1
+  assert actual == expected
+
+def test_lucas_2():
+  actual = lucas(2)
+  expected = 3
+  assert actual == expected
+
+def test_lucas_3():
+  actual = lucas(3)
+  expected = 4
+  assert actual == expected
+
+def test_lucas_4():
+  actual = lucas(4)
+  expected = 7
+  assert actual == expected
+
+def test_lucas_5():
+  actual = lucas(5)
+  expected = 11
+  assert actual == expected
+
+def test_lucas_not_in_sequence():
+  actual = lucas(-1)
+  expected = None
+  assert actual == expected
+
+def test_lucas_not_an_integer():
+  actual = lucas('1')
   expected = None
   assert actual == expected
