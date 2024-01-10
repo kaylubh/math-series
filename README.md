@@ -4,12 +4,22 @@
 
 ### Author: [Caleb Hemphill](https://github.com/kaylubh)
 
+Contributions from [Immanuel Shin](https://github.com/ImmanuelShin) to use recursion to implement the functions which generate the Fibonacci and Lucas sequence numbers
+
 ### Setup
 
 #### Requirements
 
-Install Python
+1. Install [Python](https://www.python.org/) if not already
+
+1. Install packages
+
+    `pip install -r requirements.txt`
 
 #### Run
 
-Run `python3 test_series.py` in your terminal
+This project is purely to demonstrate tests and has no other functionality.
+
+#### Tests
+
+From root of project directory run `pytest`
